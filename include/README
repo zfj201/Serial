@@ -1,0 +1,16 @@
+# 模块开发说明
+
+## 目录
+
+- `include/xxx.h`  — 声明 `xxxSetup()` / `xxxLoop()`
+- `src/xxx.cpp`    — 实现模块逻辑（不要写 setup/loop）
+- `src/modules.cpp` — 在 `kModules[]` 里注册一行
+
+## 新增模块步骤
+
+1. 新建 `include/my_module.h` 和 `src/my_module.cpp`
+2. 在 `config.h` 增加 `#define MODULE_MY_MODULE 3`
+3. 在 `modules.cpp` 的 `kModules[]` 追加一项
+4. Upload 后在串口菜单选对应编号
+
+共用引脚见 `hardware.h`。
