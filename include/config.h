@@ -10,6 +10,7 @@
 #define MODULE_WEBSERVER  7
 #define MODULE_WEB_BUTTON  8
 #define MODULE_BLE  9
+#define MODULE_CHIP_TEMP  10
 // 启动菜单超时内未选择时，默认运行的模块
 #ifndef ACTIVE_MODULE
 #define ACTIVE_MODULE MODULE_REACTION_SPEED

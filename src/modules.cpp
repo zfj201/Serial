@@ -10,6 +10,7 @@
 #include "webserver_module.h"
 #include "web_button_module.h"
 #include "ble_module.h"
+#include "chip_temp_module.h"
 
 static const AppModule kModules[] = {
     {MODULE_SERIAL_COMMAND, "serial_command", "串口命令 led_on/off/toggle",
@@ -30,6 +31,8 @@ static const AppModule kModules[] = {
      webButtonSetup, webButtonLoop},
     {MODULE_BLE, "ble", "BLE 广播 nRF 可见",
      bleSetup, bleLoop},
+    {MODULE_CHIP_TEMP, "chip_temp", "芯片温度 2s 采样 Notify",
+     chipTempSetup, chipTempLoop},
 };
 
 const AppModule *findModule(int id) {
