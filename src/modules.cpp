@@ -11,6 +11,7 @@
 #include "web_button_module.h"
 #include "ble_module.h"
 #include "chip_temp_module.h"
+#include "i2c_scan_module.h"
 
 static const AppModule kModules[] = {
     {MODULE_SERIAL_COMMAND, "serial_command", "串口命令 led_on/off/toggle",
@@ -33,6 +34,8 @@ static const AppModule kModules[] = {
      bleSetup, bleLoop},
     {MODULE_CHIP_TEMP, "chip_temp", "芯片温度 2s 采样 Notify",
      chipTempSetup, chipTempLoop},
+    {MODULE_I2C_SCAN, "I2C_scan", "I2C 总线地址扫描",
+     i2cScanSetup, i2cScanLoop},
 };
 
 const AppModule *findModule(int id) {

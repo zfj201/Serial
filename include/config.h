@@ -11,6 +11,7 @@
 #define MODULE_WEB_BUTTON  8
 #define MODULE_BLE  9
 #define MODULE_CHIP_TEMP  10
+#define MODULE_I2C_SCAN  11
 // 启动菜单超时内未选择时，默认运行的模块
 #ifndef ACTIVE_MODULE
 #define ACTIVE_MODULE MODULE_REACTION_SPEED
